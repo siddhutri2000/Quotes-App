@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import Comments from "../components/comments/Comments";
 import QuoteItem from "../components/quotes/QuoteItem";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
-
+import NotFound from "./NotFound";
 const DUMMY_QUOTES = [
   { id: "q1", author: "MAX", text: "Learning react is fun!" },
   { id: "q2", author: "MAXIMUM", text: "Learning react is great!" },
@@ -15,7 +15,7 @@ const QuoteDetails = () => {
   const quote = DUMMY_QUOTES.find((quote) => params.quoteId === quote.id);
 
   if (!quote) {
-    return <p> no quote found</p>;
+    return <NotFound />;
   }
 
   return (
