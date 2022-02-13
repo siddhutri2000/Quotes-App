@@ -41,7 +41,7 @@ const QuoteDetails = () => {
   }
   // const quote = DUMMY_QUOTES.find((quote) => params.quoteId === quote.id);
 
-  if (!loadedQuote) {
+  if (!loadedQuote.text) {
     return <NotFound />;
   }
 
